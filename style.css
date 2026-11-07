@@ -37,3 +37,205 @@
 .battle-controls .control-fire{box-shadow:inset 0 0 0 1px #9cd8c455,0 3px 18px #123d42aa}
 .battle-controls button:active{transform:scale(.97)}
 @media(min-width:700px){.battle-stage{height:510px}}
+
+/* v6: responsive input affordances and safe-area spacing */
+.battle-controls{padding-bottom:max(12px,env(safe-area-inset-bottom))}
+.battle-controls button,.zf-squad button{touch-action:none;overscroll-behavior:contain}
+#battleCanvas{user-select:none;-webkit-user-select:none}
+@media(max-width:520px){.battle-stage{height:clamp(300px,87vw,480px)}.battle-notice{font-size:10px;max-width:95%;overflow:hidden;text-overflow:ellipsis}.battle-controls{grid-template-columns:1fr .75fr 1fr}}
+@media(orientation:landscape) and (max-height:540px){.battle-stage{height:65vh;min-height:230px}}
+
+/* v8 prototype skill controls */
+.zf-skillbar{display:grid;grid-template-columns:1fr 1fr;gap:9px;padding:10px 12px 0;background:#101e29;align-items:center}
+.zf-skillbar button{border:1px solid #a2c9b2;background:#234b4a;color:#f2fff5;border-radius:12px;min-height:52px;font-weight:700;touch-action:manipulation}
+.zf-skillbar button:disabled{opacity:.6}.zf-skillbar button span{display:block;font-size:10px;color:#bce4d4;margin-top:3px}
+#comboStatus{font-size:12px;text-align:center;color:#e7d4a7}
+
+/* v9 stage selection and wave HUD */
+.zf-stage-select{margin:12px 0;padding:13px;border:1px solid #46676c;border-radius:14px;background:#12232d}
+.zf-stage-top,.zf-wave-hud{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center;font-size:12px;color:#b7d6d0}
+.zf-stage-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:10px 0}
+.zf-stage-card{min-height:62px;border-radius:10px;border:1px solid #53777c;background:#1a343e;color:#e3f4ef;padding:9px;text-align:left;font-size:12px;cursor:pointer}
+.zf-stage-card.selected{outline:2px solid #9fd7c7}.zf-stage-card:disabled{opacity:.45;cursor:not-allowed}
+.zf-wave-hud{padding:10px 13px;background:#0b2029;border-bottom:1px solid #34575d}
+@media(max-width:580px){.zf-stage-cards{grid-template-columns:1fr}.zf-stage-card{min-height:42px}}
+
+/* v10 boss HUD, responsive and non-interactive */
+.zf-boss-hud{padding:10px 14px;background:#231e30;border:1px solid #946e9c;border-radius:10px;margin:8px 0;color:#f2e7ff}
+.zf-boss-hud[hidden]{display:none!important}.zf-boss-head{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;font-size:12px}
+.zf-boss-meter{height:11px;background:#3e3049;border-radius:9px;overflow:hidden;margin:8px 0}.zf-boss-meter i{display:block;height:100%;background:linear-gradient(90deg,#a879d6,#e1a5e8);transition:width .16s}
+#zfBossWarning{color:#ffc29c;font-weight:700;font-size:12px;min-height:16px}@media(max-width:600px){.zf-boss-hud{padding:8px}.zf-boss-head{font-size:10px}}
+
+/* v11 input stability and adaptive rendering */
+#battleCanvas,#fireButton,#coverButton,#reloadButton,#skillButton{touch-action:none;overscroll-behavior:contain;}
+#battleCanvas{user-select:none;-webkit-user-select:none;}
+@media(prefers-reduced-motion:reduce){#combat *,#combat *::before,#combat *::after{animation-duration:.01ms!important;transition-duration:.01ms!important;}}
+
+/* v12 accessible controls, warning timing, and responsive HUD */
+.zf-help,.zf-save-tools{margin:10px 0;border:1px solid #456c71;border-radius:12px;background:#142832;padding:12px;color:#e4f6f1}
+.zf-help summary{cursor:pointer;font-weight:700;min-height:26px}.zf-help p{font-size:12px;line-height:1.65;color:#b9d2cf}.zf-help-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:12px}
+.zf-save-tools{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.zf-save-tools button,.zf-import{font:inherit;font-size:12px;cursor:pointer;border:1px solid #65938e;border-radius:8px;background:#21454b;color:#eafff8;padding:10px;min-height:42px}.zf-save-tools span{font-size:11px;color:#c2d9d5;flex-basis:100%}
+.zf-warning-track{height:5px;background:#4a303d;border-radius:8px;overflow:hidden;margin-top:7px}.zf-warning-track i{display:block;height:100%;width:0;background:#ffc277;transition:width .08s linear}
+.zf-warning-banner{position:absolute;z-index:3;top:12px;left:50%;transform:translateX(-50%);width:max-content;max-width:94%;padding:9px 13px;border-radius:10px;background:#542b30f0;border:2px solid #ffbc80;color:#fff8e6;font-weight:800;text-align:center;font-size:clamp(11px,2.6vw,15px);pointer-events:none;text-shadow:0 1px 2px #000}
+.zf-warning-banner[hidden]{display:none}.zf-warning-banner.urgent{background:#8b3033;border-color:#fff0a2}
+.battle-hud,.zf-wave-hud{font-variant-numeric:tabular-nums}.battle-controls button:focus-visible,.zf-stage-card:focus-visible,.zf-skillbar button:focus-visible,.zf-save-tools button:focus-visible{outline:3px solid #f8d899;outline-offset:2px}
+@media(max-width:520px){.zf-help-grid{grid-template-columns:1fr;gap:2px}.zf-save-tools button,.zf-import{flex:1;text-align:center}.zf-wave-hud{font-size:11px}.zf-boss-head{gap:5px}.battle-controls button{min-height:58px}}
+
+/* v13: pause, orientation, accessible focus and lightweight diagnostics */
+.zf-v13-toolbar{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:10px 0;font-size:13px}.zf-v13-toolbar button{min-height:40px}.zf-v13-toolbar label{display:flex;align-items:center;gap:6px}.zf-v13-toolbar output{font-variant-numeric:tabular-nums;color:#c6f4de}.zf-pause-layer:not([hidden]){position:absolute;z-index:50;inset:0;background:rgba(7,17,27,.94);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:20px}.battle-shell{position:relative}.zf-pause-layer button{min-height:48px;min-width:150px}button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid #ffe19c;outline-offset:3px}@media (orientation:portrait) and (max-width:720px){.battle-controls{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}.battle-controls button{min-width:0;font-size:12px;padding:9px 4px}.zf-v13-toolbar{font-size:12px}}@media(prefers-reduced-motion:reduce){.zf-pause-layer,.zf-v13-toolbar{animation:none!important;transition:none!important}}
+
+/* v14 combat feedback, mobile controls and performance readability */
+.zf-combat-feedback:not([hidden]){position:absolute;z-index:4;top:52px;right:12px;max-width:55%;padding:6px 10px;background:#102b36e8;border:1px solid #9bd9ce;border-radius:8px;color:#f1fffa;font-size:12px;font-weight:700;pointer-events:none}
+@media(max-width:520px){.zf-combat-feedback:not([hidden]){top:47px;right:5px;font-size:10px;padding:4px 6px}.zf-skillbar button,.zf-squad button{min-height:52px}.zf-v13-toolbar output{overflow-wrap:anywhere;font-size:11px}}
+@media(pointer:coarse){#fireButton,#coverButton,#reloadButton{min-height:60px}#skillButton{min-height:56px}}
+
+/* v15: difficulty, mobile preferences and results */
+.zf-v15-loadout,.zf-v15-options{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin:12px 0;padding:12px;border:1px solid #476170;border-radius:12px;background:#10222d}
+.zf-v15-options{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}.zf-v15-options h3,.zf-v15-options p{grid-column:1/-1;margin:0}.zf-v15-options label,.zf-v15-loadout label{display:flex;gap:8px;align-items:center;justify-content:space-between}.zf-v15-options select,.zf-v15-loadout select{min-height:38px;max-width:155px}.zf-result-stats{margin:12px auto;padding:12px;border:1px solid #85b9b0;border-radius:10px;max-width:480px;line-height:1.8;background:#132d37}.zf-large-controls .battle-controls button,.zf-large-controls .zf-skillbar button,.zf-large-controls .zf-squad button{min-height:74px;font-size:clamp(13px,3vw,18px)}
+@media(max-width:520px){.zf-v15-loadout{align-items:stretch;flex-direction:column}.zf-v15-options{grid-template-columns:1fr}.zf-v15-loadout label{justify-content:space-between}}
+
+/* v16: mobile left-hand fire layout and readable combat records */
+.zf-v16-history,.zf-v16-settings{margin:14px 0;padding:14px;border:1px solid #496070;border-radius:12px;background:rgba(15,27,38,.7)}
+.zf-v16-history summary{cursor:pointer;font-weight:700}
+.zf-v16-history table{width:100%;border-collapse:collapse;margin-top:12px;font-size:.87rem}
+.zf-v16-history th,.zf-v16-history td{border-bottom:1px solid #425261;padding:9px 5px;text-align:left}
+.zf-v16-history .zf-history-scroll{overflow-x:auto}
+.zf-v16-settings label{display:block;margin:12px 0}
+body.zf-left-controls .battle-controls{display:flex;flex-direction:row-reverse}
+body.zf-left-controls .control-fire{order:0}
+@media(max-width:650px){.zf-v16-history,.zf-v16-settings{padding:10px}.zf-v16-history table{font-size:.77rem}body.zf-left-controls .battle-controls{flex-direction:row-reverse;gap:5px}body.zf-left-controls .battle-controls button{min-width:0;flex:1}}
+
+/* v17: readable combat records, safe mobile controls, keyboard accessibility */
+.zf-v17-analytics,.zf-v17-diagnostics{margin-top:14px;padding:12px;border:1px solid rgba(180,210,225,.25);border-radius:12px}
+.zf-v17-filters{display:flex;gap:12px;flex-wrap:wrap;margin:8px 0}.zf-v17-filters label{flex:1;min-width:120px}.zf-v17-filters select{width:100%}
+.zf17-table{width:100%;border-collapse:collapse;font-size:.88rem}.zf17-table th,.zf17-table td{padding:7px;border-bottom:1px solid rgba(180,210,225,.18);text-align:left;white-space:nowrap}
+.zf17-records{max-height:340px;overflow:auto;overscroll-behavior:contain}.zf17-entry{margin:6px 0;padding:9px;border-radius:9px;background:rgba(150,180,210,.09)}.zf17-entry summary{cursor:pointer;line-height:1.5}.zf17-entry-body{padding:9px 2px;line-height:1.65;overflow-wrap:anywhere}
+.zf-v17-diagnostics ul{padding-left:20px;line-height:1.8}
+body.zf17-keyboard button:focus-visible,body.zf17-keyboard select:focus-visible,body.zf17-keyboard summary:focus-visible{outline:3px solid #f5d78d;outline-offset:3px}
+.battle-controls button{touch-action:none;user-select:none;-webkit-user-select:none}.battle-controls{padding-bottom:max(8px,env(safe-area-inset-bottom))}
+@media(max-width:650px){.zf17-table{font-size:.76rem}.zf17-table th,.zf17-table td{padding:5px}.battle-controls button{min-height:48px}.zf-v17-analytics{padding:9px}}
+@media(prefers-reduced-motion:reduce){.zf17-entry,.zf-v17-analytics{scroll-behavior:auto}}
+
+/* v18 combat analytics and mobile HUD */
+.zf18-analytics{margin-top:1rem;padding:1rem;border:1px solid rgba(160,160,180,.3);border-radius:12px}
+.zf18-chart{display:block;width:100%;max-width:640px;height:auto;min-height:130px;margin:.7rem auto;color:inherit;overflow:visible}
+.zf18-analytics h3{margin:.2rem 0 .5rem}
+.zf18-hud-option{display:flex;align-items:center;gap:.6rem;margin:.7rem 0}
+@media(max-width:650px){.zf18-analytics{padding:.65rem}.zf18-analytics .zf-save-tools{display:flex;flex-wrap:wrap;gap:.5rem}.zf18-analytics .zf-save-tools button{min-height:44px;flex:1 1 125px}.zf18-compact-hud .zf-wave-hud,.zf18-compact-hud .battle-hud{gap:.3rem;padding:.35rem .5rem;font-size:.86rem}.zf18-compact-hud .zf-wave-hud strong,.zf18-compact-hud .battle-right strong{font-size:.9rem}.zf18-compact-hud .zf-boss-hud{padding:.4rem .55rem}}
+
+/* v19 record management and mobile-friendly comparative charts */
+.zf19-tools{margin:1rem 0;padding:1rem;border:1px solid #57777f;border-radius:12px;background:rgba(12,29,40,.75)}
+.zf19-filters{display:grid;grid-template-columns:minmax(0,2fr) minmax(135px,1fr);gap:10px;margin:12px 0}.zf19-filters label{display:flex;flex-direction:column;gap:6px}.zf19-filters input,.zf19-filters select{width:100%;min-height:44px;box-sizing:border-box}.zf19-list{max-height:380px;overflow:auto;overscroll-behavior:contain}.zf19-list p{overflow-wrap:anywhere}.zf19-stage-charts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}.zf19-chart-card{padding:10px;background:#1a303b;border-radius:10px}.zf19-bar-row{margin:10px 0;font-size:12px}.zf19-bar-track{height:12px;border-radius:20px;overflow:hidden;background:#42525c;margin-top:4px}.zf19-bar-win,.zf19-bar-accuracy{height:100%;background:#70c7a5}.zf19-bar-accuracy{background:#a4a0e8}
+@media(max-width:650px){.zf19-tools{padding:10px}.zf19-filters{grid-template-columns:1fr}.zf19-stage-charts{grid-template-columns:1fr}.zf19-tools .zf-save-tools{display:flex;flex-wrap:wrap;gap:8px}.zf19-tools .zf-save-tools>*{min-height:44px;flex:1 1 170px}}
+
+/* v20 HUD settings and mobile analytics */
+.zf20-tools{margin:16px 0;padding:14px;border:1px solid #5a7182;border-radius:12px;background:#14212c}.zf20-tools h3,.zf20-tools h4{margin:12px 0}.zf20-tools .zf-save-tools{display:flex;flex-wrap:wrap;gap:8px}.zf20-tools button{min-height:44px}.zf20-report{white-space:pre-wrap;overflow-wrap:anywhere;max-height:280px;overflow:auto;padding:12px;border-radius:8px;background:#0a151e;color:#cde0e9}.zf20-hud-settings{padding:12px;border:1px solid #536d7d;border-radius:10px;margin:12px 0}.zf20-hud-settings label{display:block;margin:8px 0}.zf20-hud-settings select{max-width:100%}body.zf20-hud .battle-hud,body.zf20-hud .zf-wave-hud{zoom:var(--zf20-hud-scale,1);opacity:var(--zf20-hud-opacity,1)}@supports not (zoom:1){body.zf20-hud .battle-hud,body.zf20-hud .zf-wave-hud{font-size:calc(1em * var(--zf20-hud-scale,1))}}@media(max-width:600px){.zf20-tools{padding:10px}.zf20-tools .zf19-filters{display:grid;grid-template-columns:1fr;gap:8px}.zf20-tools button{width:100%;min-height:48px}.zf20-hud-settings select{width:100%}}
+
+/* v21 playtest panel and mobile HUD ergonomics */
+.zf21-tools{margin:12px 0;border:1px solid #607a83;border-radius:12px;background:#101e27;color:#e8f3f4;padding:12px}.zf21-tools summary{cursor:pointer;font-weight:700;min-height:40px}.zf21-content{display:grid;gap:9px;padding:12px 2px}.zf21-content h3{margin:12px 0 0;font-size:1rem}.zf21-checks{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:8px}.zf21-check{padding:10px;border:1px solid #47616b;border-radius:8px;display:flex;align-items:center;gap:8px;min-height:44px}.zf21-check input{width:19px;height:19px;flex:none}.zf21-actions{display:flex;flex-wrap:wrap;gap:8px}.zf21-actions button,.zf21-content>button{min-height:44px}.zf21-content pre{max-height:180px;overflow:auto;white-space:pre-wrap;word-break:break-word;background:#08121a;padding:12px;border-radius:8px}.zf21-content output{display:block;line-height:1.5;font-variant-numeric:tabular-nums}.zf21-tools :focus-visible{outline:3px solid #f9d27c;outline-offset:3px}@media(max-width:600px){.zf21-checks{grid-template-columns:1fr}.zf21-actions{display:grid;grid-template-columns:1fr}.zf21-tools{margin-inline:0}.battle-controls button{touch-action:none;min-height:52px}}
+
+/* v22 diagnostics */
+.zf22-tools{margin:12px 0;border:1px solid #567c86;border-radius:12px;background:#101f2a;padding:12px;color:#e9f4f7}.zf22-tools summary{cursor:pointer;font-weight:700;min-height:44px}.zf22-content{display:grid;gap:10px;padding:12px 2px}.zf22-content label{display:grid;gap:5px}.zf22-content input,.zf22-content select,.zf22-content textarea{max-width:100%;min-height:42px}.zf22-actions{display:flex;gap:8px;flex-wrap:wrap}.zf22-actions button,.zf22-content>button{min-height:44px}.zf22-content output{font-variant-numeric:tabular-nums;line-height:1.5}.zf22-session{border-bottom:1px solid #3b5260;padding:9px 3px;overflow-wrap:anywhere}.zf22-tools :focus-visible{outline:3px solid #f9d27c;outline-offset:3px}#zf22Alert{color:#ffe0a0;font-weight:700}@media(max-width:600px){.zf22-actions{display:grid;grid-template-columns:1fr}.zf22-content{font-size:14px}}
+
+/* V23 independent diagnostics panel */
+.zf23-panel{margin:12px 0;border:1px solid rgba(160,175,210,.35);border-radius:12px;background:rgba(15,24,45,.65);color:inherit}.zf23-panel summary{padding:13px 16px;cursor:pointer;font-weight:700}.zf23-content{padding:0 16px 16px}.zf23-content h3{margin:15px 0 8px}.zf23-controls{display:flex;flex-wrap:wrap;align-items:end;gap:9px}.zf23-controls label{display:flex;flex-direction:column;gap:5px;min-width:140px}.zf23-controls select,.zf23-controls button,.zf23-content>button{min-height:44px;max-width:100%;padding:9px;border-radius:8px}.zf23-compare{white-space:pre-wrap;overflow-wrap:anywhere;font:inherit;line-height:1.5}.zf23-pointer{display:inline-block;padding:5px 9px;margin:3px;border:1px solid currentColor;border-radius:20px;font-size:.85em}#zf23Status{overflow-wrap:anywhere}@media(max-width:600px){.zf23-content{padding:0 10px 12px}.zf23-controls>*{flex:1 1 100%}.zf23-controls select,.zf23-controls button{width:100%}}
+
+/* v24 supplemental diagnostics, never changes core combat HUD */
+.zf24-panel{margin:14px 0;border:1px solid #55739a;border-radius:12px;background:#101d32;color:#e7efff}.zf24-panel summary{cursor:pointer;padding:14px;font-weight:700}.zf24-content{padding:12px 16px 18px;display:grid;gap:10px}.zf24-content h3{margin:10px 0 0}.zf24-content textarea{display:block;box-sizing:border-box;width:100%;min-height:90px;margin-top:8px;padding:10px;background:#172a44;color:#fff;border:1px solid #8298b3;border-radius:8px}.zf24-actions{display:flex;flex-wrap:wrap;gap:8px}.zf24-actions button,.zf24-content>button{min-height:44px;touch-action:manipulation}.zf24-content p{overflow-wrap:anywhere}@media(max-width:640px){.zf24-content{padding:12px}.zf24-actions button{flex:1 1 150px}}
+
+/* V25: responsive armory and test instrumentation */
+.zf25-armory,.zf25-body{padding:16px;max-width:900px;margin:0 auto}.zf25-weapon-tabs,.zf25-actions{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}.zf25-weapon-tabs button,.zf25-actions button,.zf25-body>button{min-height:44px;flex:1 1 160px}.zf25-weapon-tabs button[aria-pressed="true"]{outline:2px solid #6dded4}.zf25-weapon-detail{background:rgba(18,34,45,.85);border:1px solid rgba(123,197,210,.32);border-radius:12px;padding:20px;line-height:1.7}.zf25-weapon-detail h2{margin:0 0 8px}.zf25-weapon-detail h3{margin:18px 0 4px;color:#b7e7e2}.zf25-weapon-detail dl{display:grid;grid-template-columns:minmax(110px,1fr) 2fr;gap:7px 12px}.zf25-weapon-detail dt{color:#a9c4c8}.zf25-weapon-detail dd{margin:0}.zf25-disclaimer{font-size:.84rem;opacity:.8;margin:12px 0}.zf25-panel{margin:14px 0;border:1px solid #48717b;border-radius:10px}.zf25-panel summary{padding:13px;cursor:pointer}.zf25-body label{display:block;margin:12px 0}.zf25-body input,.zf25-body textarea{display:block;width:100%;box-sizing:border-box;min-height:44px}.zf25-stat{padding:10px;margin:8px 0;border:1px solid #345b66;border-radius:8px}.zf25-meter{height:9px;background:#263a46;border-radius:8px;overflow:hidden;margin:6px 0}.zf25-meter>i{display:block;height:100%;background:#66cbbf}.zf25-body h3{margin-top:24px}@media(max-width:600px){.zf25-armory,.zf25-body{padding:10px}.zf25-weapon-detail{padding:12px}.zf25-weapon-detail dl{grid-template-columns:1fr}.zf25-weapon-detail dd{margin-bottom:8px}.zf25-actions button{flex:1 1 100%}}
+
+/* v26: visual-only weapon feedback, mobile HUD and armory */
+.zf26-magazine{display:flex;flex-wrap:wrap;gap:3px;justify-content:flex-end;max-width:180px;margin:5px 0 3px auto}.zf26-magazine i{width:7px;height:16px;border-radius:2px;background:#2c393f;border:1px solid #667b7c;opacity:.65}.zf26-magazine i.loaded{background:linear-gradient(#ffdb8d,#ae8150);border-color:#ffdda0;opacity:1}.zf26-weapon-status{font-size:10px;color:#e2d4b7;letter-spacing:.04em;text-align:right;line-height:1.4}.zf26-combat-visual{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:4}.zf26-combat-visual span{position:absolute;opacity:0;pointer-events:none}#zf26Muzzle{left:44%;bottom:29%;width:70px;height:70px;border-radius:50%;background:radial-gradient(circle,#fff9cc 0%,#fbcf72 18%,#ff9d52 35%,transparent 70%);transform:translate(-50%,50%) scale(.35)}#zf26Shell{left:48%;bottom:31%;width:7px;height:18px;background:#d3a35a;border:1px solid #f9dca6;border-radius:3px;transform:rotate(25deg)}.zf26-shot #zf26Muzzle{animation:zf26-flash .18s ease-out}.zf26-shot #zf26Shell{animation:zf26-eject .36s ease-out}.zf26-shot[data-zf26-weapon="rifle"] #zf26Muzzle{width:48px;height:48px;left:46%;bottom:32%}.zf26-shot[data-zf26-weapon="rifle"] #zf26Shell{left:49%;bottom:33%}@keyframes zf26-flash{0%{opacity:.95;transform:translate(-50%,50%) scale(.4)}55%{opacity:.7;transform:translate(-50%,50%) scale(1.1)}100%{opacity:0;transform:translate(-50%,50%) scale(1.3)}}@keyframes zf26-eject{0%{opacity:1;transform:translate(0,0) rotate(25deg)}100%{opacity:0;transform:translate(70px,-50px) rotate(210deg)}}.zf26-reloading .zf26-magazine i.loaded{animation:zf26-pulse .75s ease-in-out infinite alternate}@keyframes zf26-pulse{from{opacity:.45}to{opacity:1}}.zf26-archive-head{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:12px 0;font-size:11px;letter-spacing:.07em;color:#d5c9a9}.zf26-weapon-preview{margin:12px 0 22px}.zf26-preview-card{border:1px solid #54706c;background:linear-gradient(135deg,rgba(30,53,57,.94),rgba(24,37,45,.95));padding:18px;border-radius:12px;color:#e8f0eb}.zf26-preview-top{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap}.zf26-preview-top strong{font-size:20px;letter-spacing:.08em}.zf26-preview-top span{color:#d6bb83}.zf26-preview-metrics{display:flex;flex-wrap:wrap;gap:12px;margin:15px 0}.zf26-preview-metrics span{padding:9px 12px;border:1px solid #476368;border-radius:8px;display:flex;gap:8px;align-items:center}.zf26-preview-card p{line-height:1.7}.zf26-preview-card small{color:#e5bf9a;line-height:1.6;display:block}@media(max-width:600px){.zf26-magazine{max-width:120px;gap:2px}.zf26-magazine i{width:5px;height:12px}.zf26-weapon-status{font-size:9px}.zf26-preview-card{padding:12px}.zf26-preview-top strong{font-size:17px}.battle-controls button{min-height:50px;touch-action:manipulation}}@media(prefers-reduced-motion:reduce){.zf26-shot #zf26Muzzle,.zf26-shot #zf26Shell,.zf26-reloading .zf26-magazine i.loaded{animation:none!important}}
+
+/* v27 skill buttons: accessible on desktop and mobile */
+.zf-skillbar{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.zf-skillbar #comboStatus{grid-column:1/-1;grid-row:3}.zf-skillbar button[hidden]{display:none!important}.zf-skillbar button{min-width:0;white-space:normal}.zf-skillbar #zf27SupportSkill,.zf-skillbar #zf27CommandSkill{background:#2c405b;border-color:#91b8de}.zf-skillbar #zf27CommandSkill{background:#4a3a5c;border-color:#c0a5df}@media(max-width:520px){.zf-skillbar{gap:6px;padding:8px}.zf-skillbar button{font-size:12px;min-height:56px;padding:7px 5px}}
+
+/* v28 tactical skill feedback; decorative only */
+.zf28-skill-notice{position:relative;z-index:3;text-align:center;padding:9px 12px;margin:6px 0;border:1px solid #8fd5ff;border-radius:10px;background:rgba(12,37,54,.92);color:#d8f3ff;font-weight:800;letter-spacing:.03em;animation:zf28-notice .28s ease-out}
+.zf28-skill-notice[hidden]{display:none!important}
+.zf-skillbar button{position:relative;overflow:hidden;min-height:48px;touch-action:manipulation}
+.zf-skillbar button.zf28-on-cooldown{background-image:linear-gradient(90deg,rgba(121,165,199,.24) var(--zf28-cooldown),transparent var(--zf28-cooldown))}
+.zf-skillbar button.zf28-active{outline:2px solid #90e2ff;outline-offset:-3px}
+#battleStage.zf28-skill-burst:after{content:'';position:absolute;inset:0;pointer-events:none;z-index:2;animation:zf28-flash .7s ease-out both}
+#battleStage[data-zf28-skill=medic].zf28-skill-burst:after{background:radial-gradient(circle at 50% 65%,rgba(86,255,175,.34),transparent 65%)}
+#battleStage[data-zf28-skill=precision].zf28-skill-burst:after{background:radial-gradient(circle at center,transparent 25%,rgba(99,194,255,.30) 90%)}
+#battleStage[data-zf28-skill=rapid].zf28-skill-burst:after{background:linear-gradient(115deg,transparent 25%,rgba(255,215,122,.26) 50%,transparent 75%)}
+#battleStage[data-zf28-skill=command].zf28-skill-burst:after{background:repeating-linear-gradient(135deg,transparent 0 28px,rgba(164,148,255,.18) 29px 32px)}
+#battleStage[data-zf28-skill=guard].zf28-skill-burst:after{background:radial-gradient(ellipse at center,transparent 35%,rgba(124,186,255,.35))}
+#battleStage.zf28-reload-visual{box-shadow:inset 0 -5px rgba(255,218,127,.34)}
+@keyframes zf28-flash{0%{opacity:0;transform:scale(.96)}35%{opacity:1}100%{opacity:0;transform:scale(1.02)}}
+@keyframes zf28-notice{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:620px){.zf-skillbar{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.zf-skillbar button{min-height:52px;font-size:12px}.zf28-skill-notice{font-size:12px}}
+@media(prefers-reduced-motion:reduce){.zf28-skill-notice,#battleStage.zf28-skill-burst:after{animation:none!important}#battleStage.zf28-skill-burst:after{opacity:.3}}
+
+/* v29 visual-only tactical HUD */
+#battleStage{position:relative;isolation:isolate}
+#skillButton,#zf27SupportSkill,#zf27CommandSkill{position:relative;overflow:hidden;touch-action:manipulation;min-height:46px}
+#skillButton::after,#zf27SupportSkill::after,#zf27CommandSkill::after{content:"";position:absolute;inset:auto 0 0;height:4px;background:linear-gradient(90deg,#a1d7ff var(--zf29-cd,0%),transparent var(--zf29-cd,0%));pointer-events:none;transition:background .12s}
+#skillButton[data-zf29-state="active"],#zf27SupportSkill[data-zf29-state="active"],#zf27CommandSkill[data-zf29-state="active"]{outline:2px solid #91e9c3;outline-offset:-2px}
+#skillButton[data-zf29-state="cooldown"],#zf27SupportSkill[data-zf29-state="cooldown"],#zf27CommandSkill[data-zf29-state="cooldown"]{filter:saturate(.72)}
+#battleStage.zf29-buff-precision{box-shadow:inset 0 0 0 3px rgba(80,188,255,.45)}
+#battleStage.zf29-buff-guard{box-shadow:inset 0 0 0 3px rgba(83,132,255,.45)}
+#battleStage.zf29-buff-rapid{box-shadow:inset 0 0 0 3px rgba(245,190,80,.45)}
+#battleStage.zf29-buff-command{outline:2px solid rgba(184,118,245,.65);outline-offset:-3px}
+.zf29-switch{position:fixed;top:calc(env(safe-area-inset-top,0px) + 18%);left:50%;transform:translateX(-50%);z-index:150;pointer-events:none;padding:10px 18px;border:1px solid #8bc3f0;border-radius:12px;background:rgba(9,22,40,.9);color:#eaf6ff;font-weight:800;letter-spacing:.04em;box-shadow:0 8px 26px #0007}
+.zf29-switch[hidden]{display:none}
+.zf29-shot{position:fixed;right:15%;bottom:30%;width:20px;height:20px;pointer-events:none;z-index:80;opacity:0;border-radius:50%;background:#ffe7a6;box-shadow:0 0 14px 9px #ffbd5a99}
+.zf29-shot.zf29-firing{animation:zf29flash .16s ease-out}
+#battleStage.zf29-swap{animation:zf29swap .55s ease-out}
+#battleStage.zf29-ability-pulse{animation:zf29pulse .75s ease-out}
+@keyframes zf29flash{0%{opacity:1;transform:scale(.6)}100%{opacity:0;transform:scale(2.4)}}
+@keyframes zf29swap{0%{filter:brightness(1.45) saturate(1.3)}100%{filter:none}}
+@keyframes zf29pulse{0%{filter:brightness(1.35)}100%{filter:none}}
+@media(max-width:650px){#skillButton,#zf27SupportSkill,#zf27CommandSkill{min-height:52px;min-width:80px} .zf29-switch{font-size:12px;max-width:90vw;text-align:center}.zf29-shot{right:10%;bottom:27%}}
+@media(prefers-reduced-motion:reduce){.zf29-shot,.zf29-switch,#battleStage.zf29-swap,#battleStage.zf29-ability-pulse{animation:none!important;transition:none!important}}
+
+/* v30: tactical feedback only; reduced motion and mobile touch safe. */
+#battleStage{position:relative}
+.zf30-overlay{position:absolute;inset:0;pointer-events:none;z-index:12;overflow:hidden;border-radius:inherit}
+.zf30-active{position:absolute;top:10px;left:50%;transform:translateX(-50%);padding:5px 11px;border:1px solid rgba(120,208,255,.45);border-radius:999px;background:rgba(9,22,42,.84);color:#d8f1ff;font:700 12px/1.5 system-ui,sans-serif;opacity:0;transition:opacity .16s;max-width:90%;text-align:center}
+.zf30-active.zf30-visible{opacity:1}
+.zf30-swap{position:absolute;top:41%;left:50%;transform:translate(-50%,12px);padding:10px 18px;border-radius:10px;border:1px solid rgba(171,211,255,.55);background:rgba(4,15,30,.9);color:white;font:800 17px/1.3 system-ui,sans-serif;letter-spacing:.07em;opacity:0;transition:opacity .2s,transform .25s;white-space:nowrap;max-width:95%}
+.zf30-swap.zf30-show{opacity:1;transform:translate(-50%,0)}
+.zf30-hit{position:absolute;left:50%;top:48%;width:70px;height:70px;border-radius:50%;transform:translate(-50%,-50%) scale(.7);opacity:0;border:2px solid #ffdb9d;box-shadow:0 0 28px 8px rgba(255,180,86,.25)}
+.zf30-hit[data-weapon=daniel]{width:50px;height:50px;border-color:#8de5ff;box-shadow:0 0 20px 5px rgba(85,194,255,.24)}
+.zf30-hit.zf30-fire{animation:zf30shot .2s ease-out both}
+@keyframes zf30shot{0%{opacity:.8;transform:translate(-50%,-50%) scale(.45)}100%{opacity:0;transform:translate(-50%,-50%) scale(1.3)}}
+#battleStage.zf30-burst .zf30-overlay{box-shadow:inset 0 0 50px rgba(94,197,255,.32)}
+#battleStage[data-zf30-skill=medic].zf30-burst .zf30-overlay{box-shadow:inset 0 0 50px rgba(72,239,146,.38)}
+#battleStage[data-zf30-skill=rapid].zf30-burst .zf30-overlay{box-shadow:inset 0 0 50px rgba(255,197,72,.38)}
+#battleStage[data-zf30-skill=command].zf30-burst .zf30-overlay{box-shadow:inset 0 0 50px rgba(183,114,255,.38)}
+#battleStage.zf30-reloading .zf30-overlay{border-bottom:3px solid rgba(255,197,72,.6)}
+button[data-zf30-state]{position:relative;isolation:isolate}
+button[data-zf30-state= cooldown]{opacity:.85}
+button[data-zf30-state=cooldown]{background-image:linear-gradient(90deg,rgba(15,26,44,.44) var(--zf30-cooldown,0%),transparent var(--zf30-cooldown,0%))}
+.zf30-counter{display:inline-block;margin-left:5px;font-size:11px;font-weight:800;font-variant-numeric:tabular-nums;white-space:nowrap}
+.zf30-touch{touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+.zf30-touch.zf30-pressed{filter:brightness(1.2);transform:scale(.97)}
+@media(max-width:640px){.zf30-active{top:5px;font-size:10px;max-width:94%}.zf30-swap{font-size:12px;padding:8px 10px}.zf30-counter{font-size:10px}.zf30-touch{min-height:44px;min-width:44px}}
+@media(prefers-reduced-motion:reduce){.zf30-hit,.zf30-swap,.zf30-active{animation:none!important;transition:none!important}.zf30-touch.zf30-pressed{transform:none}}
+
+/* v31 visual-only combat presentation */
+.zf31-layer{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:7}
+.zf31-flash,.zf31-impact,.zf31-swap{position:absolute;inset:0;opacity:0;pointer-events:none}
+.zf31-flash[data-weapon="miguel"]{background:radial-gradient(ellipse 22% 20% at 70% 67%,rgba(255,206,105,.53),transparent 85%)}
+.zf31-flash[data-weapon="daniel"]{background:radial-gradient(ellipse 18% 15% at 68% 65%,rgba(125,203,255,.45),transparent 85%)}
+.zf31-firing{animation:zf31Shot .23s ease-out both}
+.zf31-impact[data-kind="player"]{box-shadow:inset 0 0 90px 12px rgba(255,68,78,.28)}
+.zf31-impact[data-kind="enemy"]{background:radial-gradient(circle at 50% 48%,rgba(255,255,255,.23),transparent 26%)}
+.zf31-struck{animation:zf31Shot .28s ease-out both}
+.zf31-swap{background:linear-gradient(115deg,transparent 36%,rgba(150,155,255,.18) 50%,transparent 64%);transform:translateX(-65%)}
+.zf31-changing{animation:zf31Swap .44s ease-out both}
+.zf31-reload{position:absolute;bottom:17%;left:50%;width:min(200px,48%);height:5px;transform:translateX(-50%);border-radius:5px;background:rgba(255,255,255,.17);opacity:0;transition:opacity .15s}
+.zf31-reload.zf31-visible{opacity:1}.zf31-reload span{display:block;height:100%;width:100%;border-radius:inherit;background:linear-gradient(90deg,#83d8ff,#e5f6ff);animation:zf31Reload 1s ease-in-out infinite alternate}
+.zf31-time{display:block;font-size:10px;font-weight:800;letter-spacing:.02em;line-height:1.15;pointer-events:none}
+button[data-zf31-state="cooldown"]{--zf31-progress:100%;background-image:linear-gradient(to top,rgba(45,88,135,.22) var(--zf31-progress),transparent var(--zf31-progress))}
+.zf31-touch{touch-action:manipulation;-webkit-tap-highlight-color:transparent;min-width:44px;min-height:44px}
+.zf31-touch.zf31-down{filter:brightness(1.22);outline:2px solid rgba(180,226,255,.5);outline-offset:-2px}
+@keyframes zf31Shot{0%{opacity:0}25%{opacity:1}100%{opacity:0}}
+@keyframes zf31Swap{0%{opacity:0;transform:translateX(-65%)}40%{opacity:1}100%{opacity:0;transform:translateX(65%)}}
+@keyframes zf31Reload{from{width:15%}to{width:100%}}
+@media(max-width:640px){.zf31-time{font-size:11px}.zf31-reload{bottom:22%}}
+@media(prefers-reduced-motion:reduce){.zf31-layer *{animation:none!important;transition:none!important}.zf31-touch.zf31-down{filter:none}}
