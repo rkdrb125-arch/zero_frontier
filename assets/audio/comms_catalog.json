@@ -1,0 +1,247 @@
+[
+  {
+    "id": 0,
+    "original": "キーボード1.mp3",
+    "file": "assets/audio/comms_00.mp3",
+    "bytes": 5641,
+    "label": "키보드 1"
+  },
+  {
+    "id": 1,
+    "original": "キーボード2.mp3",
+    "file": "assets/audio/comms_01.mp3",
+    "bytes": 11910,
+    "label": "키보드 2"
+  },
+  {
+    "id": 2,
+    "original": "キーボードの早打ち1.mp3",
+    "file": "assets/audio/comms_02.mp3",
+    "bytes": 169272,
+    "label": "키보드 빠른 타이핑 1"
+  },
+  {
+    "id": 3,
+    "original": "キーボードの早打ち2.mp3",
+    "file": "assets/audio/comms_03.mp3",
+    "bytes": 67708,
+    "label": "키보드 빠른 타이핑 2"
+  },
+  {
+    "id": 4,
+    "original": "クリック.mp3",
+    "file": "assets/audio/comms_04.mp3",
+    "bytes": 6268,
+    "label": "클릭"
+  },
+  {
+    "id": 5,
+    "original": "ダブルクリック.mp3",
+    "file": "assets/audio/comms_05.mp3",
+    "bytes": 8149,
+    "label": "더블 클릭"
+  },
+  {
+    "id": 6,
+    "original": "ディスクを入れる.mp3",
+    "file": "assets/audio/comms_06.mp3",
+    "bytes": 39496,
+    "label": "디스크 삽입"
+  },
+  {
+    "id": 7,
+    "original": "ディスクを取り出す.mp3",
+    "file": "assets/audio/comms_07.mp3",
+    "bytes": 34480,
+    "label": "디스크 꺼내기"
+  },
+  {
+    "id": 8,
+    "original": "トランシーバーのノイズ.mp3",
+    "file": "assets/audio/comms_08.mp3",
+    "bytes": 337919,
+    "label": "무전기 잡음"
+  },
+  {
+    "id": 9,
+    "original": "トレイにディスクをセット.mp3",
+    "file": "assets/audio/comms_09.mp3",
+    "bytes": 11910,
+    "label": "디스크 트레이"
+  },
+  {
+    "id": 10,
+    "original": "パソコンの電源を入れる.mp3",
+    "file": "assets/audio/comms_10.mp3",
+    "bytes": 746056,
+    "label": "컴퓨터 전원 켜기"
+  },
+  {
+    "id": 11,
+    "original": "パソコンの電源を切る.mp3",
+    "file": "assets/audio/comms_11.mp3",
+    "bytes": 68335,
+    "label": "컴퓨터 전원 끄기"
+  },
+  {
+    "id": 12,
+    "original": "プリンタで印刷.mp3",
+    "file": "assets/audio/comms_12.mp3",
+    "bytes": 128896,
+    "label": "프린터"
+  },
+  {
+    "id": 13,
+    "original": "ヘッドホンから音漏れ.mp3",
+    "file": "assets/audio/comms_13.mp3",
+    "bytes": 284002,
+    "label": "헤드폰 소리 새어 나옴"
+  },
+  {
+    "id": 14,
+    "original": "マイクノイズ.mp3",
+    "file": "assets/audio/comms_14.mp3",
+    "bytes": 411897,
+    "label": "마이크 잡음"
+  },
+  {
+    "id": 15,
+    "original": "モールス信号.mp3",
+    "file": "assets/audio/comms_15.mp3",
+    "bytes": 299048,
+    "label": "모스 신호"
+  },
+  {
+    "id": 16,
+    "original": "公衆電話にお金を入れる.mp3",
+    "file": "assets/audio/comms_16.mp3",
+    "bytes": 34480,
+    "label": "공중전화 동전"
+  },
+  {
+    "id": 17,
+    "original": "公衆電話のふたを閉める.mp3",
+    "file": "assets/audio/comms_17.mp3",
+    "bytes": 10030,
+    "label": "공중전화 덮개"
+  },
+  {
+    "id": 18,
+    "original": "公衆電話の受話器を取る1.mp3",
+    "file": "assets/audio/comms_18.mp3",
+    "bytes": 16926,
+    "label": "공중전화 수화기 1"
+  },
+  {
+    "id": 19,
+    "original": "公衆電話の受話器を取る2.mp3",
+    "file": "assets/audio/comms_19.mp3",
+    "bytes": 27584,
+    "label": "공중전화 수화기 2"
+  },
+  {
+    "id": 20,
+    "original": "受話器を取る.mp3",
+    "file": "assets/audio/comms_20.mp3",
+    "bytes": 5014,
+    "label": "수화기 들기"
+  },
+  {
+    "id": 21,
+    "original": "受話器を置く.mp3",
+    "file": "assets/audio/comms_21.mp3",
+    "bytes": 8149,
+    "label": "수화기 내려놓기"
+  },
+  {
+    "id": 22,
+    "original": "妨害電波.mp3",
+    "file": "assets/audio/comms_22.mp3",
+    "bytes": 972381,
+    "label": "전파 방해"
+  },
+  {
+    "id": 23,
+    "original": "携帯電話に出る.mp3",
+    "file": "assets/audio/comms_23.mp3",
+    "bytes": 6268,
+    "label": "휴대전화 받기"
+  },
+  {
+    "id": 24,
+    "original": "携帯電話のバイブレーション1.mp3",
+    "file": "assets/audio/comms_24.mp3",
+    "bytes": 52661,
+    "label": "휴대전화 진동 1"
+  },
+  {
+    "id": 25,
+    "original": "携帯電話のバイブレーション2.mp3",
+    "file": "assets/audio/comms_25.mp3",
+    "bytes": 51408,
+    "label": "휴대전화 진동 2"
+  },
+  {
+    "id": 26,
+    "original": "携帯電話の呼び出し音.mp3",
+    "file": "assets/audio/comms_26.mp3",
+    "bytes": 24449,
+    "label": "휴대전화 호출음"
+  },
+  {
+    "id": 27,
+    "original": "携帯電話の着信音1.mp3",
+    "file": "assets/audio/comms_27.mp3",
+    "bytes": 112848,
+    "label": "휴대전화 벨소리"
+  },
+  {
+    "id": 28,
+    "original": "携帯電話をたたむ.mp3",
+    "file": "assets/audio/comms_28.mp3",
+    "bytes": 2506,
+    "label": "휴대전화 접기"
+  },
+  {
+    "id": 29,
+    "original": "電話が切れる1.mp3",
+    "file": "assets/audio/comms_29.mp3",
+    "bytes": 107832,
+    "label": "통화 종료 1"
+  },
+  {
+    "id": 30,
+    "original": "電話が切れる2.mp3",
+    "file": "assets/audio/comms_30.mp3",
+    "bytes": 25920,
+    "label": "통화 종료 2"
+  },
+  {
+    "id": 31,
+    "original": "電話の呼び出し音.mp3",
+    "file": "assets/audio/comms_31.mp3",
+    "bytes": 134790,
+    "label": "전화 발신음"
+  },
+  {
+    "id": 32,
+    "original": "電話の着信音.mp3",
+    "file": "assets/audio/comms_32.mp3",
+    "bytes": 275852,
+    "label": "전화 벨소리"
+  },
+  {
+    "id": 33,
+    "original": "電話をかける.mp3",
+    "file": "assets/audio/comms_33.mp3",
+    "bytes": 16926,
+    "label": "전화 걸기"
+  },
+  {
+    "id": 34,
+    "original": "黒電話のベルが鳴る.mp3",
+    "file": "assets/audio/comms_34.mp3",
+    "bytes": 252028,
+    "label": "흑색 전화기 벨"
+  }
+]

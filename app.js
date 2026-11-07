@@ -17,5 +17,4 @@ font.addEventListener('change',saveSettings);motion.addEventListener('change',sa
 document.getElementById('resetSettings').addEventListener('click',()=>{settings={fontSize:'normal',reduceMotion:false};saveReset();});
 function saveReset(){font.value=settings.fontSize;motion.checked=settings.reduceMotion;saveSettings();}
 applySettings();
-const sound=document.getElementById('sound');sound.addEventListener('click',()=>{sound.textContent=sound.textContent.includes('OFF')?'♪ ON':'♪ OFF';});
-// No sound files in v1: toggle is a UI preference only. Combat is intentionally not yet implemented.
+// Audio toggle and playback are initialized in audio.js (v3).

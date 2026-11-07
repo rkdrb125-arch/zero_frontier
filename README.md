@@ -1,21 +1,9 @@
-# ZERO FRONTIER v1
+# ZERO FRONTIER v5 — Third-person Cover Shooter
 
-미겔폰과 분리된 독립 웹게임 시작 프로젝트입니다.
+Based on the complete v4 audio integration ZIP. All 102 MP3 effects, original scripts, storage keys, menu and story sample are retained.
 
-## 포함 기능
-- 모바일/PC 반응형 메인 메뉴
-- 챕터 1 샘플 스토리 대사 진행
-- 전투 준비 화면 (실제 전투는 다음 버전부터 개발)
-- 캐릭터 정보: 미겔의 주무장은 데저트 이글 권총, 다니엘의 무장은 미정
-- 설정(텍스트 크기, 모션 줄이기) 브라우저 저장
-- 메인 메뉴 복귀
+Changes: differentiated rear-view silhouettes for Miguel and Daniel, crouch/aim/weapon/reload animations, mobile drag-to-aim with explicit FIRE button, desktop mouse aim and left-click shoot, more consistent canvas handling, responsive control styling. Miguel keeps a short Desert Eagle silhouette. Daniel weapon is a temporary generic placeholder and is not canon. No new story canon.
 
-## 실행 및 배포
-`index.html`을 브라우저에서 열어 확인하거나, ZIP을 풀어 GitHub 저장소 루트에 업로드한 뒤 Vercel의 정적 사이트로 배포합니다. 빌드 명령은 필요하지 않습니다.
+Controls: PC mouse move to aim, left click to fire, Space cover, R reload, 1/2 operative selection. Mobile drag to aim (release to cover), FIRE button shoots, cover toggle and reload buttons.
 
-## 주의
-- 기존 미겔폰 자산/음원/채보는 포함하지 않아 파일 크기가 작습니다.
-- 스토리 텍스트는 세계관 확정 전 임시 샘플입니다.
-- 사운드 토글은 아직 실제 음원을 제어하지 않습니다.
-- 미겔폰과 진행 데이터는 아직 연동하지 않습니다.
-- 기존 미겔폰은 수정하지 않습니다.
+Code syntax and ZIP integrity checked. Runtime device testing is still recommended.

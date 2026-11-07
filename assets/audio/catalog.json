@@ -1,0 +1,337 @@
+[
+  {
+    "original": "サブマシンガンのボルトリリース.mp3",
+    "file": "assets/audio/sfx_00.mp3",
+    "bytes": 25703
+  },
+  {
+    "original": "サブマシンガンの弾倉をセット.mp3",
+    "file": "assets/audio/sfx_01.mp3",
+    "bytes": 25703
+  },
+  {
+    "original": "サブマシンガンの弾倉を外す.mp3",
+    "file": "assets/audio/sfx_02.mp3",
+    "bytes": 40750
+  },
+  {
+    "original": "サブマシンガン発射1.mp3",
+    "file": "assets/audio/sfx_03.mp3",
+    "bytes": 68544
+  },
+  {
+    "original": "サブマシンガン発射2.mp3",
+    "file": "assets/audio/sfx_04.mp3",
+    "bytes": 52035
+  },
+  {
+    "original": "ショット.mp3",
+    "file": "assets/audio/sfx_05.mp3",
+    "bytes": 21315
+  },
+  {
+    "original": "ショットガンのポンプアクション1.mp3",
+    "file": "assets/audio/sfx_06.mp3",
+    "bytes": 26330
+  },
+  {
+    "original": "ショットガンのポンプアクション2.mp3",
+    "file": "assets/audio/sfx_07.mp3",
+    "bytes": 29465
+  },
+  {
+    "original": "ショットガンの薬莢が落ちる.mp3",
+    "file": "assets/audio/sfx_08.mp3",
+    "bytes": 26330
+  },
+  {
+    "original": "ショットガン発射.mp3",
+    "file": "assets/audio/sfx_09.mp3",
+    "bytes": 52992
+  },
+  {
+    "original": "ショット命中.mp3",
+    "file": "assets/audio/sfx_10.mp3",
+    "bytes": 13791
+  },
+  {
+    "original": "スピードアップ.mp3",
+    "file": "assets/audio/sfx_11.mp3",
+    "bytes": 30719
+  },
+  {
+    "original": "ゾンビに体をえぐられる.mp3",
+    "file": "assets/audio/sfx_12.mp3",
+    "bytes": 30528
+  },
+  {
+    "original": "ゾンビの声1.mp3",
+    "file": "assets/audio/sfx_13.mp3",
+    "bytes": 53288
+  },
+  {
+    "original": "ゾンビの声2.mp3",
+    "file": "assets/audio/sfx_14.mp3",
+    "bytes": 43884
+  },
+  {
+    "original": "ゾンビの声3.mp3",
+    "file": "assets/audio/sfx_15.mp3",
+    "bytes": 42004
+  },
+  {
+    "original": "ゾンビの息遣い.mp3",
+    "file": "assets/audio/sfx_16.mp3",
+    "bytes": 494026
+  },
+  {
+    "original": "ゾンビの断末魔.mp3",
+    "file": "assets/audio/sfx_17.mp3",
+    "bytes": 60185
+  },
+  {
+    "original": "ゾンビの食事.mp3",
+    "file": "assets/audio/sfx_18.mp3",
+    "bytes": 444498
+  },
+  {
+    "original": "ナイフを投げる.mp3",
+    "file": "assets/audio/sfx_19.mp3",
+    "bytes": 9403
+  },
+  {
+    "original": "パワーアップ.mp3",
+    "file": "assets/audio/sfx_20.mp3",
+    "bytes": 23195
+  },
+  {
+    "original": "ビームガン.mp3",
+    "file": "assets/audio/sfx_21.mp3",
+    "bytes": 40832
+  },
+  {
+    "original": "ビームガン銃撃戦.mp3",
+    "file": "assets/audio/sfx_22.mp3",
+    "bytes": 112512
+  },
+  {
+    "original": "ビーム砲1.mp3",
+    "file": "assets/audio/sfx_23.mp3",
+    "bytes": 84635
+  },
+  {
+    "original": "ビーム砲2.mp3",
+    "file": "assets/audio/sfx_24.mp3",
+    "bytes": 73350
+  },
+  {
+    "original": "ビーム砲3.mp3",
+    "file": "assets/audio/sfx_25.mp3",
+    "bytes": 97174
+  },
+  {
+    "original": "ビーム砲チャージ.mp3",
+    "file": "assets/audio/sfx_26.mp3",
+    "bytes": 96547
+  },
+  {
+    "original": "ミサイル.mp3",
+    "file": "assets/audio/sfx_27.mp3",
+    "bytes": 82128
+  },
+  {
+    "original": "レーザー.mp3",
+    "file": "assets/audio/sfx_28.mp3",
+    "bytes": 33226
+  },
+  {
+    "original": "ロケットランチャー.mp3",
+    "file": "assets/audio/sfx_29.mp3",
+    "bytes": 80064
+  },
+  {
+    "original": "大型狙撃銃のボルトアクション.mp3",
+    "file": "assets/audio/sfx_30.mp3",
+    "bytes": 21941
+  },
+  {
+    "original": "大型狙撃銃の弾倉をセット.mp3",
+    "file": "assets/audio/sfx_31.mp3",
+    "bytes": 20688
+  },
+  {
+    "original": "大型狙撃銃の薬莢が落ちる1.mp3",
+    "file": "assets/audio/sfx_32.mp3",
+    "bytes": 23195
+  },
+  {
+    "original": "大型狙撃銃の薬莢が落ちる2.mp3",
+    "file": "assets/audio/sfx_33.mp3",
+    "bytes": 23195
+  },
+  {
+    "original": "大型狙撃銃の薬莢が落ちる3.mp3",
+    "file": "assets/audio/sfx_34.mp3",
+    "bytes": 39496
+  },
+  {
+    "original": "大型狙撃銃を発射.mp3",
+    "file": "assets/audio/sfx_35.mp3",
+    "bytes": 85888
+  },
+  {
+    "original": "大爆発1.mp3",
+    "file": "assets/audio/sfx_36.mp3",
+    "bytes": 254536
+  },
+  {
+    "original": "大爆発2.mp3",
+    "file": "assets/audio/sfx_37.mp3",
+    "bytes": 122752
+  },
+  {
+    "original": "大砲1.mp3",
+    "file": "assets/audio/sfx_38.mp3",
+    "bytes": 69589
+  },
+  {
+    "original": "大砲2.mp3",
+    "file": "assets/audio/sfx_39.mp3",
+    "bytes": 67081
+  },
+  {
+    "original": "宇宙基地サイレン.mp3",
+    "file": "assets/audio/sfx_40.mp3",
+    "bytes": 277106
+  },
+  {
+    "original": "弾倉に弾を込める.mp3",
+    "file": "assets/audio/sfx_41.mp3",
+    "bytes": 183692
+  },
+  {
+    "original": "拳銃の弾切れ.mp3",
+    "file": "assets/audio/sfx_42.mp3",
+    "bytes": 25703
+  },
+  {
+    "original": "拳銃をチャッと構える.mp3",
+    "file": "assets/audio/sfx_43.mp3",
+    "bytes": 25076
+  },
+  {
+    "original": "拳銃を弾き飛ばされる.mp3",
+    "file": "assets/audio/sfx_44.mp3",
+    "bytes": 28800
+  },
+  {
+    "original": "拳銃を撃つ.mp3",
+    "file": "assets/audio/sfx_45.mp3",
+    "bytes": 17812
+  },
+  {
+    "original": "拳銃を落とす.mp3",
+    "file": "assets/audio/sfx_46.mp3",
+    "bytes": 24192
+  },
+  {
+    "original": "爆発1.mp3",
+    "file": "assets/audio/sfx_47.mp3",
+    "bytes": 82128
+  },
+  {
+    "original": "爆発2.mp3",
+    "file": "assets/audio/sfx_48.mp3",
+    "bytes": 62692
+  },
+  {
+    "original": "爆発3.mp3",
+    "file": "assets/audio/sfx_49.mp3",
+    "bytes": 114560
+  },
+  {
+    "original": "爆発4.mp3",
+    "file": "assets/audio/sfx_50.mp3",
+    "bytes": 97920
+  },
+  {
+    "original": "狙撃銃で撃たれる（スロー演出）.mp3",
+    "file": "assets/audio/sfx_51.mp3",
+    "bytes": 88704
+  },
+  {
+    "original": "狙撃銃のボルトアクション.mp3",
+    "file": "assets/audio/sfx_52.mp3",
+    "bytes": 33853
+  },
+  {
+    "original": "狙撃銃をチャッと構える.mp3",
+    "file": "assets/audio/sfx_53.mp3",
+    "bytes": 26330
+  },
+  {
+    "original": "狙撃銃発射.mp3",
+    "file": "assets/audio/sfx_54.mp3",
+    "bytes": 54720
+  },
+  {
+    "original": "狙撃銃発射（スロー演出）.mp3",
+    "file": "assets/audio/sfx_55.mp3",
+    "bytes": 149184
+  },
+  {
+    "original": "薬莢1.mp3",
+    "file": "assets/audio/sfx_56.mp3",
+    "bytes": 28211
+  },
+  {
+    "original": "薬莢2.mp3",
+    "file": "assets/audio/sfx_57.mp3",
+    "bytes": 36361
+  },
+  {
+    "original": "血がたれる1.mp3",
+    "file": "assets/audio/sfx_58.mp3",
+    "bytes": 25344
+  },
+  {
+    "original": "血がたれる2.mp3",
+    "file": "assets/audio/sfx_59.mp3",
+    "bytes": 56448
+  },
+  {
+    "original": "重機関銃を乱射1.mp3",
+    "file": "assets/audio/sfx_60.mp3",
+    "bytes": 45504
+  },
+  {
+    "original": "重機関銃を乱射2.mp3",
+    "file": "assets/audio/sfx_61.mp3",
+    "bytes": 65827
+  },
+  {
+    "original": "野戦（戦争）.mp3",
+    "file": "assets/audio/sfx_62.mp3",
+    "bytes": 1135385
+  },
+  {
+    "original": "銃撃戦の跳弾音.mp3",
+    "file": "assets/audio/sfx_63.mp3",
+    "bytes": 63946
+  },
+  {
+    "original": "電子ルーレット.mp3",
+    "file": "assets/audio/sfx_64.mp3",
+    "bytes": 82832
+  },
+  {
+    "original": "電子ルーレットが徐々に止まる.mp3",
+    "file": "assets/audio/sfx_65.mp3",
+    "bytes": 41065
+  },
+  {
+    "original": "電子ルーレット停止ボタンを押す.mp3",
+    "file": "assets/audio/sfx_66.mp3",
+    "bytes": 11023
+  }
+]
